@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.1.4
+  version: "2025-06-20"
   python_min: "3.11"
 
 package:
@@ -9,8 +9,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://github.com/oraios/serena/archive/v${{ version }}.tar.gz
-  sha256: f6d9145b5c911346877b87c7c19915cefb8fef73768981e254d523bbf6f46a5c
+  url: https://github.com/oraios/serena/archive/${{ version }}.tar.gz
+  sha256: 2e83b31f747712e984df22edfe9a70a2cb2882fe9e71578fa536817c42bed605
   patches:
     - remove-dotenv.patch
 
