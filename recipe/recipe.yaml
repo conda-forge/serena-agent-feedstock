@@ -21,8 +21,7 @@ build:
   python:
     entry_points:
       - serena = serena.cli:top_level
-      - serena-mcp-server = serena.cli:start_mcp_server
-      - index-project = serena.cli:index_project
+      - serena-hooks = serena.hooks:hook_commands
 requirements:
   host:
     - python ${{ python_min }}.*
@@ -63,8 +62,7 @@ tests:
         - python ${{ python_min }}.*
     script:
       - serena --help
-      - serena-mcp-server --help
-      - index-project --help
+      - serena-hooks --help
 
 about:
   license: MIT
