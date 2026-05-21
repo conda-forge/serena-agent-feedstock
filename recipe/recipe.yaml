@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.1.4
+  version: "1.5.0"
   python_min: "3.11"
 
 package:
@@ -10,9 +10,9 @@ package:
 
 source:
   url: https://github.com/oraios/serena/archive/v${{ version }}.tar.gz
-  sha256: f6d9145b5c911346877b87c7c19915cefb8fef73768981e254d523bbf6f46a5c
+  sha256: f892ba5a6f730bcf9ed168d3e1db79cd02ebdaf901753fbc58d0104fe40ebe34
   patches:
-    - remove-dotenv.patch
+    - relax-deps.patch
 
 build:
   number: 0
@@ -21,9 +21,7 @@ build:
   python:
     entry_points:
       - serena = serena.cli:top_level
-      - serena-mcp-server = serena.cli:start_mcp_server
-      - index-project = serena.cli:index_project
-
+      - serena-hooks = serena.hooks:hook_commands
 requirements:
   host:
     - python ${{ python_min }}.*
@@ -50,6 +48,8 @@ requirements:
     - tqdm >=4.67.1
     - tiktoken >=0.9.0
     - anthropic >=0.54.0
+    - beautifulsoup4 >=4.12.0
+
 
 tests:
   - python:
@@ -62,8 +62,7 @@ tests:
         - python ${{ python_min }}.*
     script:
       - serena --help
-      - serena-mcp-server --help
-      - index-project --help
+      - serena-hooks --help
 
 about:
   license: MIT
