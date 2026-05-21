@@ -12,7 +12,7 @@ source:
   url: https://github.com/oraios/serena/archive/v${{ version }}.tar.gz
   sha256: f892ba5a6f730bcf9ed168d3e1db79cd02ebdaf901753fbc58d0104fe40ebe34
   patches:
-    - remove-dotenv.patch
+    - relax-deps.patch
 
 build:
   number: 0
