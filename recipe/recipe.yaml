@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.5.1"
+  version: "1.5.2"
   python_min: "3.11"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/oraios/serena/archive/v${{ version }}.tar.gz
-  sha256: b5a7c41734fc5f53bab76f69fb7d10ce282fe772caec4c340d8c0d358f4f8e88
+  sha256: b993327869fe2733af435dcd8448e003e985c2e90f0a6efa51516d484da9323a
   patches:
     - relax-deps.patch
 
@@ -30,7 +30,6 @@ requirements:
   run:
     - python >=${{ python_min }}
     - requests >=2.33.0
-    - pyright >=1.1.403
     - overrides >=7.7.0
     - python-dotenv >=1.2.2
     - mcp ==1.27.0
