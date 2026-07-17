@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.5.3"
+  version: "1.6.0"
   python_min: "3.11"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/oraios/serena/archive/v${{ version }}.tar.gz
-  sha256: 2a6a989b1165c272556f162861eeb81a8079e82cef66d6630f3ad2732158f0a2
+  sha256: f98f9e971cc0b526f1e7239e90b1ac162022965673c4eb7cf1285643c04a78a7
   patches:
     - relax-deps.patch
 
@@ -48,6 +48,7 @@ requirements:
     - tiktoken >=0.12.0
     - anthropic >=0.59.0
     - beautifulsoup4 >=4.14.2
+    - oslex >=2.0.0
 
 
 tests:
