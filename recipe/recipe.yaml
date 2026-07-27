@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.6.0"
+  version: "1.6.1"
   python_min: "3.11"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/oraios/serena/archive/v${{ version }}.tar.gz
-  sha256: f98f9e971cc0b526f1e7239e90b1ac162022965673c4eb7cf1285643c04a78a7
+  sha256: dbd1c1cae8c1ff3f3f4e3039673b9876214e2353cd53a48391937e0582bce31a
   patches:
     - relax-deps.patch
 
@@ -32,7 +32,7 @@ requirements:
     - requests >=2.33.0
     - overrides >=7.7.0
     - python-dotenv >=1.2.2
-    - mcp ==1.27.0
+    - mcp ==1.28.1
     - flask >=3.1.3
     - sensai-utils >=1.5.0
     - pydantic >=2.12.5
@@ -46,7 +46,7 @@ requirements:
     - joblib >=1.5.1
     - tqdm >=4.67.1
     - tiktoken >=0.12.0
-    - anthropic >=0.59.0
+    - anthropic >=0.117.0
     - beautifulsoup4 >=4.14.2
     - oslex >=2.0.0
 
