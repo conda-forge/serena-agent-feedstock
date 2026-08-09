@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.6.1"
+  version: "1.7.0"
   python_min: "3.11"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/oraios/serena/archive/v${{ version }}.tar.gz
-  sha256: dbd1c1cae8c1ff3f3f4e3039673b9876214e2353cd53a48391937e0582bce31a
+  sha256: 7eea6098b959b16fec12693ee27f214ab6769e68a2c7e33f4b8c0ca349eac125
   patches:
     - relax-deps.patch
 
