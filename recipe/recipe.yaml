@@ -51,6 +51,7 @@ requirements:
     - pystray >=0.19.5
     - pygls >=2.1.1
     - lsprotocol >=2025.0.0
+    - oslex >=2.0.0
 
 
 tests:

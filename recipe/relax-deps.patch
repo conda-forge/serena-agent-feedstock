@@ -3,7 +3,9 @@ Relax exact dependency pins and remove packages not available on conda-forge.
 The upstream pyproject.toml pins all dependencies with ==, which is too strict
 for conda packaging. This patch relaxes pins to >= and removes packages that
 are either unavailable on conda-forge (dotenv, pywebview, pythonnet) or are transitive
-dependencies that don't need explicit pinning.
+dependencies that don't need explicit pinning (urllib3, werkzeug, starlette,
+python-multipart, filelock, cryptography, regex). Note: oslex is a direct
+dependency (shell command quoting library), not transitive.
 
 --- a/pyproject.toml
 +++ b/pyproject.toml
