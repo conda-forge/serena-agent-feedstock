@@ -48,7 +48,10 @@ requirements:
     - tiktoken >=0.12.0
     - anthropic >=0.117.0
     - beautifulsoup4 >=4.14.2
-    - oslex >=2.0.0
+    - pywebview >=6.2
+    - pystray >=0.19.5
+    - pygls >=2.1.1
+    - lsprotocol >=2025.0.0
 
 
 tests:
