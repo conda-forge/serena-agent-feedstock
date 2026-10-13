@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/serena-agent-fe
 
 Home: https://github.com/oraios/serena
 
-Package license: MIT
+Package license: GPL-3.0-or-later AND MIT
 
 Summary: Serena is a powerful coding agent toolkit capable of turning an LLM into a fully-featured agent that works directly on your codebase. Unlike most other tools, it is not tied to an LLM, framework or an interface, making it easy to use it in a variety of ways.
 

@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.7.0"
+  version: "2.0.0"
   python_min: "3.11"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/oraios/serena/archive/v${{ version }}.tar.gz
-  sha256: 7eea6098b959b16fec12693ee27f214ab6769e68a2c7e33f4b8c0ca349eac125
+  sha256: 3672638ec4de6d3163b15749e874239cc7a0bf255cdd3bc25039b53eafae2ea7
   patches:
     - relax-deps.patch
 
@@ -21,6 +21,7 @@ build:
   python:
     entry_points:
       - serena = serena.cli:top_level
+      - serena-agent = serena.cli:top_level
       - serena-hooks = serena.hooks:hook_commands
 requirements:
   host:
@@ -32,7 +33,8 @@ requirements:
     - requests >=2.33.0
     - overrides >=7.7.0
     - python-dotenv >=1.2.2
-    - mcp ==1.28.1
+    - mcp ==2.2.0
+    - click >=8.3.1
     - flask >=3.1.3
     - sensai-utils >=1.5.0
     - pydantic >=2.12.5
@@ -52,6 +54,7 @@ requirements:
     - pygls >=2.1.1
     - lsprotocol >=2025.0.0
     - oslex >=2.0.0
+    - filelock >=3.25.2
 
 
 tests:
@@ -70,8 +73,10 @@ tests:
       - serena-hooks --help
 
 about:
-  license: MIT
-  license_file: LICENSE
+  license: GPL-3.0-or-later AND MIT
+  license_file:
+    - LICENSE
+    - LICENSES/
   homepage: https://github.com/oraios/serena
   summary: Serena is a powerful coding agent toolkit capable of turning an LLM into a fully-featured agent that works directly on your codebase. Unlike most other tools, it is not tied to an LLM, framework or an interface, making it easy to use it in a variety of ways.
 
